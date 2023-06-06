@@ -1,0 +1,23 @@
+version: v1
+
+id:
+  org: 2e3b7756-bbaa-4d09-8ee1-8beabd0c6a2c
+  app: 9aabb809-69f9-426f-9f8f-e53e0383e6b2
+
+scanners:
+  - sast
+  - dast
+  - secret
+  - sca
+  - iac
+  - container   
+
+dast:
+  url: http://34.201.198.188:1313/DemoFrontEnd/
+  full_scan: false
+
+resource:
+  serial_scan: false
+
+fail_pipeline:
+  risk_rating: 8
