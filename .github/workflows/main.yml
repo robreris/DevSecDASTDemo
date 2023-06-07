@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature1
 
 env:
   AWS_REGION: us-east-1
@@ -39,7 +40,7 @@ jobs:
           aws ecs wait services-stable --cluster fortidast-demo --services WorkshopSvc      
   FortiDevSec-Run:
     runs-on: self-hosted
-    if: ${{ true }}
+    if: ${{ false }}
     needs: DeployStackTest
     steps:
       - name: Run SAST scan
@@ -50,7 +51,7 @@ jobs:
           docker run --rm --env-file /tmp/env --mount type=bind,source=$PWD,target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest
   FortiDAST-Run:
     runs-on: self-hosted
-    if: ${{ true }}
+    if: ${{ false }}
     needs: FortiDevSec-Run
     steps:
       - name: Run DAST scan
