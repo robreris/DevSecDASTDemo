@@ -8,7 +8,6 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  RUN_STEP: true
   ECR_REPOSITORY: fortidast-demo
 
 jobs:
