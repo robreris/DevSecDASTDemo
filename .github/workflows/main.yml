@@ -8,7 +8,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: fortidast-demo
+  ECR_REPOSITORY: devsecdastdemo
 
 jobs:
   DeployStackTest:
@@ -39,7 +39,7 @@ jobs:
           aws ecs wait services-stable --cluster fortidast-demo --services WorkshopSvc      
   FortiDevSec-Run:
     runs-on: self-hosted
-    if: ${{ false }}
+    if: ${{ true }}
     needs: DeployStackTest
     steps:
       - name: Run SAST scan
