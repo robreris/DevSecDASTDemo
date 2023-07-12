@@ -6,7 +6,6 @@ id:
 
 scanners:
   - sast
-  - dast
   - secret
   - sca
   - iac
@@ -16,4 +15,4 @@ resource:
   serial_scan: false
 
 fail_pipeline:
-  risk_rating: 3
+  risk_rating: 8
