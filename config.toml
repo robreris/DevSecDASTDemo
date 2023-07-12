@@ -77,8 +77,8 @@ enableEmoji = true
 [params]
   # Change default color scheme with a variant one. Eg. can be "auto", "red", "blue", "green" or an array like [ "blue", "green" ].
   #themeVariant = "auto"
-  themeVariant = "blue"
-  #themeVariant = "Fortinet"
+  #themeVariant = "blue"
+  themeVariant = "Fortinet"
 
   #themeVariant = "mine"
   #themeVariant = "relearn-dark"

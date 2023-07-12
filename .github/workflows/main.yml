@@ -9,6 +9,8 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: devsecdastdemo
+  ECS_CLUSTER: devsecdastdemo
+  ECS_SERVICE: ECS-Service-ecs-demo-app
 
 jobs:
   DeployStackTest:
@@ -36,7 +38,7 @@ jobs:
       - name: Wait on cluster to stabilize
         run: |
           sleep 5
-          aws ecs wait services-stable --cluster fortidast-demo --services WorkshopSvc      
+          aws ecs wait services-stable --cluster $ECS_CLUSTER --services $ECS_SERVICE
   FortiDevSec-Run:
     runs-on: self-hosted
     if: ${{ true }}
