@@ -13,7 +13,7 @@ scanners:
   - container   
 
 dast:
-  url: http://localhost:1313/DevSecDASTDemo/
+  url: http://34.201.198.188:1313/DevSecDASTDemo/
   full_scan: true #true|false
 
 resource:
