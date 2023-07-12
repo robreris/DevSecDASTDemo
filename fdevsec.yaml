@@ -6,10 +6,15 @@ id:
 
 scanners:
   - sast
+  - dast
   - secret
   - sca
   - iac
   - container   
+
+dast:
+  url: http://localhost:1313/DevSecDASTDemo/
+  full_scan: true #true|false
 
 resource:
   serial_scan: false
